@@ -17,12 +17,13 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg==true){
-            this.price= 300;
-           this.bill=  "Base Price of Veg Pizza: "+300 +"\n";
+            this.totalPrice= 300;
+
+           this.bill=  "Base Price Of The Pizza: "+300 +"\n";
 
         }else{
-            this.price= 400;
-            this.bill = "Base Price Of Non Veg Pizza: "+400 +"\n";
+            this.totalPrice= 400;
+            this.bill = "Base Price Of The Pizza: "+400 +"\n";
         }
 
 
@@ -36,8 +37,9 @@ public class Pizza {
         // your code goes here
 
         if(Ealready==false){
+
             totalPrice = totalPrice +80;
-            this.bill = this.bill + "Extra cheese added: "+80+"\n";
+            this.bill = this.bill + "Extra Cheese Added: "+80+"\n";
 
           Ealready=true;
         }
@@ -55,11 +57,11 @@ public class Pizza {
             if(isVeg){
 
                 totalPrice = totalPrice + 70;
-                this.bill = this.bill + "Extra Toppings added: "+70+"\n";
+                this.bill = this.bill + "Extra Toppings Added: "+70+"\n";
             }else{
 
                 totalPrice = totalPrice + 120;
-                this.bill = this.bill + "Extra Toppings added: "+120+"\n";
+                this.bill = this.bill + "Extra Toppings Added: "+120+"\n";
             }
             Talready= true;
         }
@@ -73,7 +75,7 @@ public class Pizza {
         if(Balready==false){
 
             totalPrice = totalPrice + 20;
-            this.bill = this.bill + "Paper Bag added: "+20+"\n";
+            this.bill = this.bill + "Paperbag Added: "+20+"\n";
             Balready= true;
         }
     }
@@ -81,7 +83,7 @@ public class Pizza {
     public String getBill(){
         // your code goes here
 //            bill= Integer.toString(price);
-        this.bill = this.bill + "Total Bill Price is: "+totalPrice+"\n";
+        this.bill = this.bill + "Total Price: "+totalPrice+"\n";
         return bill;
 
     }
